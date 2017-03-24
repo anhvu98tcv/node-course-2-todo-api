@@ -28,11 +28,20 @@ MongoClient.connect(url,(err, db) =>{
   //   console.log(result);
   // });
 
+  // db.collection('Users').findOneAndDelete({
+  //   _id: new ObjectID("58d4e677034a5127e8ffbe62")
+  // }).then((result) =>{
+  //   console.log(JSON.stringify(result, undefined, 2));
+  // });
+
+  // db.collection('Users').deleteMany({name: 'Anh Vu'}).then((result) =>{
+  //   console.log(result);
+  // });
+
   db.collection('Users').findOneAndDelete({
     _id: new ObjectID("58d4e677034a5127e8ffbe62")
   }).then((result) =>{
     console.log(JSON.stringify(result, undefined, 2));
   });
-
   //db.close();
 });
